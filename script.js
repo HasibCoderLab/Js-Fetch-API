@@ -1,5 +1,6 @@
 const URL = "https://catfact.ninja/fact";
 const para = document.querySelector("#fact")
+const btn = document.querySelector("button")
 
 const getFacts = async () =>{
     console.log("Geting ......");
@@ -15,4 +16,4 @@ let responce =  await fetch(URL);
     
 
 }
-
+btn.addEventListener("click" , getFacts)
