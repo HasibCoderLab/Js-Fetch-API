@@ -1,11 +1,18 @@
 const URL = "https://catfact.ninja/fact";
+const para = document.querySelector("#fact")
 
 const getFacts = async () =>{
     console.log("Geting ......");
     
-    let promise =  await fetch(URL);
-    console.log(promise.status);
-    console.log(promise);
+let responce =  await fetch(URL);
+    console.log(responce.status);
+    console.log(responce);
+    responce.json;
+    let data = await responce.json()
+    
+    console.log(data.fact);
+    para.innerText = data.fact
+    
 
 }
 
